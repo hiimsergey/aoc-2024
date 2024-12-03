@@ -9,9 +9,9 @@ banner="    _          ____   ____   ___ ____  _  _
 
 if [ $# -eq 0 ] || [ $# -gt 2 ]; then
     echo "$banner"
-    echo "Usage: ./make <day>
-       ./make prep <day>
-       ./make all"
+    echo "Usage: ./run <day>        # run the puzzle of day <day>
+       ./run prep <day>   # create the template of <day>.c
+       ./run all          # run all puzzles"
     exit 1
 fi
 
