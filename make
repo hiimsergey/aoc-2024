@@ -24,19 +24,41 @@ case $1 in
 
         echo "#include <stdio.h>
 
-// TODO include the string content in INPUT
+/*
+TODO ADD task description
+*/
+int one() {
+    FILE *input = fopen(\"$2.txt\", \"r\");
+    if (!input) {
+        fprintf(stderr, \"aoc-2024 puzzle $2.1: Missing $2.txt!\\n\");
+        return 1;
+    }
 
-void one() {
-    int result = 0;
+    int result = -1;
     printf(\"$2.1: %d\\t\\t\", result);
+
+    fclose(input);
+    return 0;
 }
 
-void two() {
-    int result = 0;
+/*
+TODO ADD task description
+*/
+int two() {
+    FILE *input = fopen(\"$2.txt\", \"r\");
+    if (!input) {
+        fprintf(stderr, \"aoc-2024 puzzle $2.2: Missing $2.txt!\\n\");
+        return 1;
+    }
+
+    int result = -1;
     printf(\"$2.2: %d\\n\", result);
+
+    fclose(input);
+    return 0;
 }
 
-int main() { one(); two(); }" > $2.c && echo "Created $2.c"
+int main() { return one() | two(); }" > $2.c && echo "Created $2.c"
         ;;
     "all")
         echo "$banner"
